@@ -1,0 +1,18 @@
+﻿<UserControl
+    x:Class="Moneyero.Views.Transactions.TransactionsTabView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:Views="clr-namespace:Moneyero.Views.Transactions"
+    >
+    <Grid>
+        <Grid Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="170" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Views:TransactionFilterView Grid.Column="0" />
+            <Views:TransactionListView Grid.Column="1" />
+        </Grid>
+    </Grid>
+</UserControl>

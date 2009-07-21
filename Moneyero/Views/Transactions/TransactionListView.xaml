@@ -1,0 +1,48 @@
+﻿<UserControl
+    x:Class="Moneyero.Views.Transactions.TransactionListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:swc="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+    xmlns:swcd="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data" 
+    xmlns:Views="clr-namespace:Moneyero.Views.Transactions" 
+    >
+    <UserControl.DataContext>
+        <Binding Path="TransactionListViewModel" Source="{StaticResource ViewModelLocator}" />
+    </UserControl.DataContext>
+
+    <Grid>
+        <swc:DockPanel LastChildFill="True" Margin="10">
+            <Views:CashFlowView swc:DockPanel.Dock="Top" Margin="0,0,0,10" />
+            <swcd:DataGrid
+                ItemsSource="{Binding Path=Transactions}"
+                IsReadOnly="True"
+                AutoGenerateColumns="False"
+                CanUserReorderColumns="False"
+                CanUserResizeColumns="False"
+                >
+                <swcd:DataGrid.Columns>
+                    <swcd:DataGridTextColumn
+                        Header="Beskrivelse"
+                        Binding="{Binding Path=Description}"
+                        Width="374"
+                        />
+                    <swcd:DataGridTextColumn
+                        Header="Kategori"
+                        Binding="{Binding Path=Category}"
+                        Width="190"
+                        />
+                    <swcd:DataGridTextColumn
+                        Header="Beløp"
+                        Binding="{Binding Path=Amount}"
+                        Width="90"
+                        />
+                    <swcd:DataGridTextColumn
+                        Header="Dato"
+                        Binding="{Binding Path=Date}"
+                        Width="80"
+                        />
+                </swcd:DataGrid.Columns>
+            </swcd:DataGrid>
+        </swc:DockPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,84 @@
+﻿<UserControl
+    x:Class="Moneyero.Views.Transactions.CashFlowView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    <Grid Background="White">
+        <Border BorderBrush="#DDDDDD" BorderThickness="0,2,0,2" Padding="0,8" CornerRadius="0">
+            <StackPanel>
+                <TextBlock
+                    Text="Kontantflyt - 15. september - 14. oktober"
+                    HorizontalAlignment="Center"
+                    FontSize="16"
+                    Margin="0,0,0,8"
+                    />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Incoming -->
+                    <Rectangle Grid.Column="0" Fill="#5BA73F" RadiusX="10" RadiusY="10" />
+                    <Rectangle Grid.Column="0" RadiusX="10" RadiusY="10">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <GradientStop Color="#00000000" Offset="0" />
+                                <GradientStop Color="#22000000" Offset="1" />
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock
+                        Grid.Column="0"
+                        Text="+ 4 542,54 kr"
+                        FontSize="15"
+                        Foreground="White"
+                        HorizontalAlignment="Center"
+                        Padding="5"
+                        />
+
+                    <!-- Outgoing -->
+                    <Rectangle Grid.Column="2" Fill="#D87F2B" RadiusX="10" RadiusY="10" />
+                    <Rectangle Grid.Column="2" RadiusX="10" RadiusY="10">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <GradientStop Color="#00000000" Offset="0" />
+                                <GradientStop Color="#22000000" Offset="1" />
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock
+                        Grid.Column="2"
+                        Text="- 1 670,74 kr"
+                        FontSize="15"
+                        Foreground="White"
+                        HorizontalAlignment="Center"
+                        Padding="5"
+                        />
+
+                    <!-- Resulting -->
+                    <Rectangle Grid.Column="5" Fill="#3B88B8" RadiusX="10" RadiusY="10" />
+                    <Rectangle Grid.Column="5" RadiusX="10" RadiusY="10">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <GradientStop Color="#00000000" Offset="0" />
+                                <GradientStop Color="#22000000" Offset="1" />
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock
+                        Grid.Column="5"
+                        Text="= 2 871,80 kr"
+                        FontSize="15"
+                        Foreground="White"
+                        HorizontalAlignment="Center"
+                        Padding="5"
+                        />
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

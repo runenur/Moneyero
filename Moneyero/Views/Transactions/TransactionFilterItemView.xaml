@@ -1,0 +1,16 @@
+﻿<UserControl
+    x:Class="Moneyero.Views.Transactions.TransactionFilterItemView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    >
+    <!--<UserControl.DataContext>
+        <Binding Path="TransactionFilterItemViewModel" Source="{StaticResource ServiceLocator}" />
+    </UserControl.DataContext>-->
+
+    <Grid>
+        <StackPanel Margin="5">
+            <TextBlock Text="{Binding Title}" FontSize="14" Foreground="#7B8F70" />
+            <TextBlock Text="{Binding Description}" FontSize="11" Foreground="Gray" />
+        </StackPanel>
+    </Grid>
+</UserControl>
